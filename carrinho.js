@@ -8,4 +8,5 @@ function calcularTotalCarrinho(itens) {
     }, 0);
 }
 
+// tudo certo por aqui, só para teste.
 module.exports = { calcularTotalCarrinho };
