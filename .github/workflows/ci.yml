@@ -1,24 +1,25 @@
-nome: CI / testes
+name: CI / testes
 
 on:
-  branches: ["main"]
-pull_request:
-  branches: ["main"]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  test:
-    runs-on: ubunto-latest
+  testes:
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
 
-      - name: instalar dependências
-        run: npm install
+    - name: Instalar dependencias
+      run: npm install
 
-        - name: Rodar testes
-          run: node carrinho.test.js
+    - name: Rodar testes
+      run: node carrinho.test.js
