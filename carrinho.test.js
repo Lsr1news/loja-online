@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { calculartotal } = require('./carrinho');
+const { calcularTotal } = require('./carrinho');
 
 test ("calcula o total do carrinho corretamente", () => {
     const itens = [
@@ -8,11 +8,11 @@ test ("calcula o total do carrinho corretamente", () => {
         { nome: "Boné", preco: 30, quantidade: 1 },
     ];
 
-    const total = calculartotal(itens);
+    const total = calcularTotal(itens);
 
     assert.strictEqual(total, 130);
 });
 
 test("carrinho vazio soma zero", () => {    
-    assert.strictEqual(calculartotal([]), 0);
+    assert.strictEqual(calcularTotal([]), 0);
 });
