@@ -8,4 +8,4 @@ function calculatorTotal(itens) {
     }, 0);
 }
 
-module.exports = { calculatorTotalCarrinho };
+module.exports = { calculatorTotal };
