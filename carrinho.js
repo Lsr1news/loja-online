@@ -1,4 +1,4 @@
-function calculartoTotalCarrinho(itens) {
+function calcularTotalCarrinho(itens) {
     if (!Array.isArray(itens)) {
         throw new Error("itens precisa ser um array.");
     }
@@ -8,5 +8,5 @@ function calculartoTotalCarrinho(itens) {
     }, 0);
 }
 
-module.exports = { calculartoTotalCarrinho };
- 
+// tudo certo por aqui, só para teste.
+module.exports = { calcularTotalCarrinho };

@@ -1,15 +1,25 @@
-name: CI
+name: CI / testes
 
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
   testes:
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v4
-     - name: Instalar dependencias
-       run: npm install 
-     - name: Rodar os testes
-       run: npm test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Rodar testes
+      run: node carrinho.test.js
