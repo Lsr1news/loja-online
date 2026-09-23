@@ -5,9 +5,9 @@ Projeto de e-commerce desolvolvido na disciplina Git, Agile e Dev Culture.
 ## Como rodar
 
 git clone https://github.com/Lsr1news/loja-online.git
-cd loja-online
-npm install
-npm start
+- cd loja-online
+- npm install
+- npm start
 
 ## Estrutura
 
